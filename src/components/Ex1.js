@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Text = (props) => {  
-    return <p style={{fontSize: `${props.fontSize}px`, fontWeight: `${props.fontWeight}`, color: `${props.color}`, textDecoration: `${props.textDecoration}`}} >{props.className}</p>;
+    return <p style={{fontSize: `${props.fontSize}px`, fontWeight: `${props.fontWeight}`, color: `${props.color}`, textDecoration: props.textDecoration ? "underline" : ""}} >{props.className}</p>;
   }
 
 class Ex1 extends React.Component {
@@ -13,7 +13,7 @@ class Ex1 extends React.Component {
         <Text className="Regular Text" fontSize={14}/>
         <Text className="Huge Header" fontWeight="bold" fontSize={32} />
         <Text className="Danger notification" color="red"/>
-        <Text className="Underline Text" textDecoration="underline"/>    
+        <Text className="Underline Text" textDecoration={true}/>    
       </div>      
     </div>
         );

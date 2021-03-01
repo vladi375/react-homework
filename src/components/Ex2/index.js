@@ -7,16 +7,8 @@ class Ex2 extends React.Component {
       italic: false
     };
 
-    setItalic = () => {
-      this.setState({italic: true});
-    }
-
-    setRegular = () => {
-      this.setState({italic: false});
-    }
-  
     changeStyle = () => {
-      !this.state.italic ? this.setItalic() : this.setRegular();
+      this.setState({ italic: !this.state.italic ? true : false });
     }
 
     render() {
