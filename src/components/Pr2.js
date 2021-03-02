@@ -3,17 +3,17 @@ import React from 'react';
 class Player extends React.Component {
 
     state = {
-        value: "≧",
+        arr: ["≧","≩","≹"],
+        i: 0,
     }
 
     changePlayer = () => {
-        this.setState({ value: this.state.value === "≧" ? "≩" : 
-        this.state.value === "≩" ? "≹" : "≧"})        
+        this.setState({ i: this.state.i < this.state.arr.length - 1 ? this.state.i + 1 : 0})        
     }
 
     render () {
         return (
-            <div style={{ fontWeight: "bold", fontSize: 32 }} onClick={this.changePlayer}>{this.state.value}</div>
+            <div style={{ fontWeight: "bold", fontSize: 32 }} onClick={this.changePlayer}>{this.state.arr[this.state.i]}</div>
         )
     }
 }
