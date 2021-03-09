@@ -2,17 +2,34 @@ import React from 'react';
 import './styles.css';
 
 class Menu extends React.Component {
+
+    ingredients = [
+        { name: "Главная", id: 0 },
+        { name: "Контакты", id: 1 },
+        { name: "Доставка", id: 2 },
+        { name: "Оплата", id: 3 }
+    ];
+
     state = {
         list: false,
     }
 
-    openList = () => {
+    onToggle = () => {
         this.setState({ list: !this.state.list })
     }
 
     render() {
-        return ( this.state.list ? <div className="list"><button onClick={this.openList}>Закрыть</button><ul><Option name="Главная"/><Option name="Контакты"/>
-            <Option name="Доставка"/><Option name="Оплата"/></ul></div> : <div className="list"><button onClick={this.openList}>Меню</button></div>
+        return (
+            <div>
+                <button onClick={this.onToggle}>Меню {this.state.list ? "🔺" : "🔻"}</button>
+                { this.state.list && (
+                    <div>
+                        {this.ingredients.map(item => {
+                            return <div key={item.id}>{item.name}</div>
+                        })}
+                    </div>                    
+                )}                
+            </div>
         )
     }
 }
