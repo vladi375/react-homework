@@ -4,7 +4,13 @@ import Pr1 from './components/Pr1';
 import Pr2 from './components/Pr2';
 import Ex2 from './components/Ex2';
 import Ex3 from './components/Ex3';
+import Pr3 from './components/Pr3';
+import Pr3props from './components/Pr3-props';
+import Pr4 from './components/Pr4';
+import Ex4 from './components/Ex4';
+import Ex5 from './components/Ex5';
 import './App.css';
+import data from './data.json';
 
 function App() {
   return (
@@ -13,7 +19,12 @@ function App() {
       <Ex2 />
       <Ex3 />
       <Pr1 />
-      <Pr2 />      
+      <Pr2 />
+      <Pr3 /> 
+      <Pr3props />
+      <Pr4 />
+      <Ex4 />
+      <Ex5 />    
     </div>
   );
 }
