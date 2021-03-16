@@ -12,8 +12,8 @@ import Ex5 from "./components/Ex5";
 import Ex6 from "./components/Ex6";
 import Ex7 from "./components/Ex7";
 import ToDoList from "./components/TodoList";
+import App2 from "./components/GET-request";
 import "./App.css";
-import data from "./data.json";
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
       <Ex6 />
       <Ex7 />
       <ToDoList />
+      <App2 />
     </div>
   );
 }
