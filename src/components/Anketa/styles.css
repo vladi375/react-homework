@@ -1,0 +1,9 @@
+.success:after {
+  content: "You are right!";
+  color: green;
+}
+
+.failure:after {
+  content: "Not correct!";
+  color: red;
+}

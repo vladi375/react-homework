@@ -16,6 +16,7 @@ import App2 from "./components/GET-request";
 import LoginPage from "./components/LoginPage";
 import SignUpPage from "./components/SignUpPage";
 import "./App.css";
+import { LoginPageF } from "./components/LoginPage_func";
 
 function App() {
   return (
@@ -34,8 +35,9 @@ function App() {
       <Ex7 />
       <ToDoList />
       <App2 />
-      <LoginPage /> */}
-      <SignUpPage />
+      <LoginPage />
+      <SignUpPage /> */}
+      {/* <LoginPageF /> */}
     </div>
   );
 }
