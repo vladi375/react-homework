@@ -1,16 +1,13 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback } from "react";
 
 const Option = ({ club, value, onChoose }) => {
-  const [chosen, setChosen] = useState(false);
-
   const onClick = useCallback(
     (event) => {
       console.log(event);
-      setChosen(event.target.checked);
 
-      onChoose(event.target.checked, event.target.value);
+      onChoose(event.target.value);
     },
-    [setChosen, onChoose]
+    [onChoose]
   );
 
   return (
@@ -20,7 +17,6 @@ const Option = ({ club, value, onChoose }) => {
           type="radio"
           name="premier-league"
           value={value}
-          checked={chosen}
           onChange={onClick}
         />
         {club}

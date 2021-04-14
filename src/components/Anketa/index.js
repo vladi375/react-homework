@@ -28,10 +28,10 @@ const answerOptions = [
 const Anketa = ({ title }) => {
   const [result, setResult] = useState("");
 
-  const onPressOption = (pressed, element) => {
-    console.log("clicked on an option", pressed, element);
+  const onPressOption = (element) => {
+    console.log("clicked on an option", element);
 
-    if (pressed && element === "manutd") {
+    if (element === "manutd") {
       setResult("success");
     } else {
       setResult("failure");
